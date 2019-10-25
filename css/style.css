@@ -11,6 +11,23 @@ p {
     text-align: justify;
 }
 
+/* a=0 b=0 c=1 -> Especificidad = 001*/
+table {
+    width: 100%;
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001*/
+table, th, td {
+    border: 1px solid black;
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001*/
+li {
+    list-style-type: circle;
+    list-style-position: inside;
+    padding: 4px;
+}
+
 /* a=0 b=0 c=2 -> Especificidad = 002 */
 p::first-letter {
     font-size: 200%;
@@ -24,7 +41,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     text-align: center;
     text-transform: uppercase;
-    padding: 100px 25px;
 }
 
 /* a=0 b=0 c=1 -> Especificidad = 001 */
@@ -40,7 +56,8 @@ h2, h4, h6 {
 /* a=0 b=0 c=1 -> Especificidad = 001 */
 h1 {
     font-size: 2em;
-    border-radius: 25px;
+    border-radius: 24px;
+    padding: 64px 32px;
 }
 
 /* a=0 b=0 c=1 -> Especificidad = 001 */
